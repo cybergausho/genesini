@@ -44,4 +44,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function linkedSocialAccounts()
+    {
+        return $this->hasOne(LinkedSocialAccount::class);
+    }
 }
